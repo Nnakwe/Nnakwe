@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title> Introduction To JavaScript </title>
+</head>
+<body>
+
+<h1> Welcome to the World of JavaScript </h1>
+
+<h1 id="demo"> Welcome, Tobi </h1>
+
+<br/>
+
+<button onclick="changeText()"> Click Me </button>
+
+
+<hr/>
+
+<input type="text" name="username" id="username" placeholder="Enter Your Name">
+<br/>
+<button onclick="greetUser()"> Greet User </button>
+
+<h1 id="greeting"> </h1>
+
+
+
+<hr>
+
+
+<h1> Simple Calculator </h1>
+
+<label> Value 1: </label>
+<input type="number" name="value1" id="value1" placeholder="Enter your Value">
+
+<br>
+
+<label> Value 2:</label>
+<input type="number" name="value2" id="value2" placeholder="Enter your Value">
+
+<br>
+
+<button onclick="calculateSum()"> Calculate </button>
+
+
+<h1 id="result"></h1>
+
+
+<script type="text/javascript">
+	
+	function changeText() {
+		document.getElementById("demo").innerHTML = "Welcome, JavaScript";
+	}
+
+
+	function greetUser(){
+		let name = document.getElementById("username").value;
+		document.getElementById("greeting").innerHTML = "Good evening, " + name;
+	}
+
+
+	function calculateSum(){
+		let number1 = parseFloat(document.getElementById("value1").value);
+		let number2 = parseFloat(document.getElementById("value2").value);
+
+		let sum = number1 + number2;
+
+		document.getElementById("result").innerHTML = "The outcome is:" + sum;
+	}
+</script>
+
+
+
+
+</body>
+</html>
