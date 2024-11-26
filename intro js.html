@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Introduction to Javascript</title>
+</head>
+<body>
+
+	<h1>Welcome to the world of Javascript</h1>
+	<h1 id="demo">Welcome,Stephen</h1>
+	<br>
+	<button onclick="changeText()">Click Me</button>
+	<hr>
+	<input type="text" name="Username" id="Username" placeholder="Enter your name">
+	<br>
+	<button onclick="greetUser()">Greet User</button>
+	<h1 id="greet"></h1>
+	<hr>
+	<h1>Simple Calculator</h1>
+	<label>Value1</label>
+	<input type="number" name="value1" id="value1" placeholder="Enter your value">
+<br>
+	<label>Value2</label>
+	<input type="number" name="value2" id="value2" placeholder="Enter your number">
+	<button onclick="calculateSome()">Calculate</button>
+	<h1 id="result"></h1>
+	<hr>
+
+	<h2>Click Counter</h2>
+	<button onclick="incrementCounter()">Click Me!</button>
+	<p id="counter">You've clicked the button 0 times.</p>
+	<h2>On the Light</h2>
+	<button onclick="off and on()">Click Me!</button>
+	<p id="light">You've clicked the button 0 times.</p>
+
+	<script>
+		function changeText(){
+
+		document.getElementById("demo").innerHTML= "Welcome,javascript";
+
+		}
+
+		function greetUser(){
+
+		let name = document.getElementById("Username").value;
+
+		document.getElementById("greet").innerHTML="Good evening," + name;
+
+
+		}
+
+		function calculateSome(){
+
+ let number1 = parseFloat(document.getElementById("value1"). value);
+ let number2 = parseFloat(document.getElementById("value2"). value);
+
+ let sum = number1 + number2;
+ 	document.getElementById("result").innerHTML = "The outcome is"  + sum;
+
+
+}
+
+
+let count = 0;
+
+function incrementCounter() {
+  count++;
+  document.getElementById("counter").innerHTML = "You've clicked the button " + count + " times.";
+}
+
+
+
+
+
+
+
+	</script>
+
+
+
+
+
+
+
+
+
+</body>
+</html>
