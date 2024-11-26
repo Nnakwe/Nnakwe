@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="jvs.css">
+  <title>Image Slider with Arrows</title>
+</head>
+<body>
+
+<div class="slider">
+  <img class="slides fade-slide" src="image/porsche.jfif" alt="Image 1">
+  <img class="slides fade-slide" src="image/Acid background.jfif" alt="Image 2">
+  <img class="slides fade-slide" src="image/mercedes.jfif" alt="Image 3">
+  <img class="slides fade-slide" src="image/steven.png" alt="Image 4">
+
+  <!-- Navigation Arrows -->
+  <button class="arrow left-arrow" onclick="previousSlide()">&#10094;</button>
+  <button class="arrow right-arrow" onclick="nextSlide()">&#10095;</button>
+</div>
+
+<script >
+	let currentIndex = 0;
+const slides = document.getElementsByClassName("slides");
+
+// Function to show a specific slide
+function showSlide(index) {
+  // Reset the index if out of bounds
+  if (index >= slides.length) {
+    currentIndex = 0;
+  } else if (index < 0) {
+    currentIndex = slides.length - 1;
+  } else {
+    currentIndex = index;
+  }
+
+  // Hide all slides
+  for (let i = 0; i < slides.length; i++) {
+    slides[i].classList.remove("active");
+  }
+
+  // Show the current slide
+  slides[currentIndex].classList.add("active");
+}
+
+// Show the first slide by default
+showSlide(currentIndex);
+
+// Function to show the next slide
+function nextSlide() {
+  showSlide(currentIndex + 1);
+}
+
+// Function to show the previous slide
+function previousSlide() {
+  showSlide(currentIndex - 1);
+}
+</script>
+</body>
+</html>
