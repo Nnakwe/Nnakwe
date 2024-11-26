@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mega Menu</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+        }
+        .navbar {
+            display: flex;
+            background-color: #333;
+            padding: 15px;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .navbar img {
+            width: 100px;
+        }
+        .navbar ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+        .navbar ul li {
+            display: inline-block;
+            position: relative;
+            margin: 0 15px;
+        }
+        .navbar ul li a {
+            color: white;
+            text-decoration: none;
+        }
+        .navbar ul li .mega-menu {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background-color:darkred;
+            padding: 20px;
+            width: 300px;
+            color: white;
+        }
+        .navbar ul li:hover .mega-menu {
+            display: block;
+        }
+        .mega-menu div {
+            margin-bottom: 15px;
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="navbar">
+        <img src="twt.png" alt="Logo">
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Products</a>
+                <div class="mega-menu">
+                    <div><strong>Category 1</strong>
+                        <br>
+                        <a href="#">Product A</a><br>
+                         <a href="#">Product B</a><br>
+                          <a href="#">Product C</a>
+                    </div>
+                    <div><strong>Category 2</strong><br><a href="#">Product B</a></div>
+                </div>
+            </li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </nav>
+
+</body>
+</html>
