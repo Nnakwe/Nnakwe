@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Responsive E-Commerce Demo</title>
+  <link rel="stylesheet" href="ecom.css">
+</head>
+<body>
+
+<!-- Top Bar with Logo and Links -->
+<header class="top-bar">
+  <div class="logo">Demo Shop</div>
+  <nav>
+    <ul>
+      <li><a href="#home">Home</a></li>
+      <li><a href="#products">Products</a></li>
+      <li><a href="#contact">Contact</a></li>
+      <li><a href="#cart">Cart</a></li>
+    </ul>
+  </nav>
+</header>
+
+<!-- Ad Banner -->
+<div class="ad-banner">Free Shipping on Orders Over $50!</div>
+
+<!-- Collapsible Side Menu -->
+<div class="side-menu">
+  <button class="menu-toggle" onclick="toggleMenu()">&#9776; Categories</button>
+  <ul class="menu-content" id="sideMenuContent">
+    <li><a href="#electronics">Electronics</a></li>
+    <li><a href="#fashion">Fashion</a></li>
+    <li><a href="#beauty">Beauty</a></li>
+    <li><a href="#home-appliances">Home Appliances</a></li>
+  </ul>
+</div>
+
+<!-- Main Content Area -->
+<main class="content">
+  <!-- Banner Slider -->
+  <div class="banner-slider">
+    <img class="slide active" src="Image/pixabay.jfif" alt="Banner 1">
+    <img class="slide" src="Image/bbb.png" alt="Banner 2">
+    <img class="slide" src="Image/Aps.jfif" alt="Banner 3">
+    <button class="arrow left-arrow" onclick="prevSlide()">&#10094;</button>
+    <button class="arrow right-arrow" onclick="nextSlide()">&#10095;</button>
+  </div>
+
+  <!-- Product Catalog -->
+  <section id="products" class="product-catalog">
+    <h2>Featured Products</h2>
+    <div class="product-grid">
+      <div class="product">
+        <img src="Image/burger.jfif" alt="Product 1">
+        <h3>Product 1</h3>
+        <p>$19.99</p>
+        <button>Add to Cart</button>
+      </div>
+      <div class="product">
+        <img src="Image/laptop.jfif" alt="Product 2">
+        <h3>Product 2</h3>
+        <p>$29.99</p>
+        <button>Add to Cart</button>
+      </div>
+      <!-- Add more product items as needed -->
+    </div>
+  </section>
+</main>
+
+<!-- Footer Section -->
+<footer>
+  <div class="footer-section">
+    <h3>Quick Links</h3>
+    <ul>
+      <li><a href="#about">About Us</a></li>
+      <li><a href="#faq">FAQ</a></li>
+      <li><a href="#returns">Returns</a></li>
+      <li><a href="#shipping">Shipping Info</a></li>
+    </ul>
+  </div>
+  <div class="footer-section">
+    <h3>Payment Methods</h3>
+    <p>Visa | MasterCard | PayPal | Mobile Money</p>
+  </div>
+  <div class="footer-section">
+    <h3>Compliance</h3>
+    <p>&copy; 2024 Demo Shop. All Rights Reserved</p>
+  </div>
+</footer>
+
+<script src="ecom.js"></script>
+</body>
+</html>
