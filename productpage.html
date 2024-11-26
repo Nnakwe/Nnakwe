@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Product Details</title>
+  <link rel="stylesheet" href="productpage.css">
+</head>
+<body>
+
+<!-- Top Bar with Logo and Links -->
+<header class="top-bar">
+  <div class="logo">Demo Shop</div>
+  <nav>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="catalog.html">Products</a></li>
+      <li><a href="#contact">Contact</a></li>
+      <li><a href="#cart">Cart (<span id="cartCount">0</span>)</a></li>
+    </ul>
+  </nav>
+</header>
+
+<!-- Product Detail Section -->
+<main class="product-detail">
+  <div class="product-gallery">
+    <img id="mainImage" src="Image/television.jpg" alt="Product Image" class="main-image">
+    <div class="thumbnails">
+      <img src="Image/Ashion.jpg" alt="Thumbnail 1" onclick="changeImage('product1.jpg')">
+      <img src="Image/teddy.jfif" alt="Thumbnail 2" onclick="changeImage('product2.jpg')">
+      <img src="Image/white.jfif" alt="Thumbnail 3" onclick="changeImage('product3.jpg')">
+    </div>
+  </div>
+
+  <div class="product-info">
+    <h1>Product Title</h1>
+    <p class="price">$29.99</p>
+    <p class="description">This is a detailed description of the product, outlining features, materials, and any other relevant details to entice customers to make a purchase.</p>
+
+    <!-- Quantity Selector and Add to Cart -->
+    <div class="quantity">
+      <label for="quantity">Quantity:</label>
+      <input type="number" id="quantity" value="1" min="1">
+    </div>
+    <button onclick="addToCart()">Add to Cart</button>
+  </div>
+</main>
+
+<!-- Footer Section -->
+<footer>
+  <div class="footer-section">
+    <h3>Quick Links</h3>
+    <ul>
+      <li><a href="#about">About Us</a></li>
+      <li><a href="#faq">FAQ</a></li>
+      <li><a href="#returns">Returns</a></li>
+      <li><a href="#shipping">Shipping Info</a></li>
+    </ul>
+  </div>
+  <div class="footer-section">
+    <h3>Payment Methods</h3>
+    <p>Visa | MasterCard | PayPal | Mobile Money</p>
+  </div>
+  <div class="footer-section">
+    <h3>Compliance</h3>
+    <p>&copy; 2024 Demo Shop. All Rights Reserved</p>
+  </div>
+</footer>
+
+<script src="productpage.js"></script>
+</body>
+</html>
