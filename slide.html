@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="slide.css">
+  <title>Image Slider</title>
+</head>
+<body>
+
+<div class="slider">
+  <img class="slides" src="image/porsche.jfif" alt="Image 1">
+  <img class="slides" src="image/Acid background.jfif" alt="Image 2">
+  <img class="slides" src="image/mercedes.jfif" alt="Image 3">
+  <img class="slides" src="image/steven.png" alt="Image 4">
+
+</div>
+
+<script >
+ let currentIndex = 0;
+const slides = document.getElementsByClassName("slides");
+
+// Function to show the next slide
+function showSlide() {
+  // Hide all slides
+  for (let i = 0; i < slides.length; i++) {
+    slides[i].classList.remove("active");
+  }
+
+  // Show the next slide
+  slides[currentIndex].classList.add("active");
+
+  // Update index to show the next image
+  currentIndex = (currentIndex + 1) % slides.length; // Loop back to the first image
+}
+
+// Initialize slider to show the first image immediately
+showSlide();
+
+// Automatically change slides every 3 seconds
+setInterval(showSlide, 3000); 
+
+
+
+
+</script>
+</body>
+</html>
